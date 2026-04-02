@@ -21,6 +21,7 @@ pip install requests
 
 # Running the script:
 ```
+python3 make_usernames.py
 python3 main.py
 ```
 
