@@ -1,15 +1,15 @@
 import string
 import itertools
 
-i = 0
+length_of_usernames = int(input("Length of usernames to generate: "))
 
 def username_maker():
     base_chars = string.ascii_lowercase + string.digits
 
-    for combo in itertools.product(base_chars, repeat=5):
+    for combo in itertools.product(base_chars, repeat=length_of_usernames):
         yield "".join(combo)
 
-    for combo in itertools.product(base_chars, repeat=4):
+    for combo in itertools.product(base_chars, repeat=length_of_usernames-1):
         base_list = list(combo)
 
         yield "".join(base_list[:1] + ['_'] + base_list[1:])
